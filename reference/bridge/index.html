@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Python bridge protocol - CWL UML</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Python bridge protocol";
+        var mkdocs_page_input_path = "reference/bridge.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> CWL UML
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-diagram/">Your first diagram</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/configure/">Configure previews</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/dependencies/">Manage vendor dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/troubleshoot/">Troubleshoot rendering</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/develop/">Develop and package</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/documentation/">Build the documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../behavior/">Supported behavior</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Python bridge protocol</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#request-fields">Request fields</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inspection">Inspection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conversion">Conversion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#errors">Errors</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Explanation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../explanation/architecture/">Architecture and security</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">CWL UML</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Python bridge protocol</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="python-bridge-protocol">Python bridge protocol<a class="headerlink" href="#python-bridge-protocol" title="Permanent link">&para;</a></h1>
+<p><code>python/bridge.py</code> consumes one JSON object on stdin and writes one JSON object to stdout, then exits. The extension starts it as <code>python -I /absolute/path/to/python/bridge.py</code>. Library stdout is redirected to stderr to keep the response parseable.</p>
+<h2 id="request-fields">Request fields<a class="headerlink" href="#request-fields" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>Required source filesystem path, resolved into the base file URI.</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>string</td>
+<td>Required CWL document snapshot.</td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td>string</td>
+<td><code>inspect</code> for discovery; the extension uses <code>render</code> for conversion. The implementation treats any other value as conversion too.</td>
+</tr>
+<tr>
+<td><code>diagram</code></td>
+<td>string</td>
+<td>Required for conversion: <code>ACTIVITY</code>, <code>COMPONENT</code>, <code>CLASS</code>, <code>SEQUENCE</code>, or <code>STATE</code>.</td>
+</tr>
+<tr>
+<td><code>workflow</code></td>
+<td>string</td>
+<td>Required for conversion: exact Workflow ID returned by inspection.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inspection">Inspection<a class="headerlink" href="#inspection" title="Permanent link">&para;</a></h2>
+<p>Example request shape (replace the path and text with your source):</p>
+<pre><code class="language-json">{&quot;path&quot;: &quot;/work/example.cwl&quot;, &quot;text&quot;: &quot;&lt;CWL source&gt;&quot;, &quot;action&quot;: &quot;inspect&quot;}
+</code></pre>
+<p>A workflow inspection can return:</p>
+<pre><code class="language-json">{&quot;diagrams&quot;: [&quot;ACTIVITY&quot;, &quot;COMPONENT&quot;, &quot;CLASS&quot;, &quot;SEQUENCE&quot;, &quot;STATE&quot;], &quot;workflows&quot;: [&quot;main&quot;]}
+</code></pre>
+<p>IDs come from the loader and need not always be the short name <code>main</code>. A standalone tool returns empty <code>diagrams</code> and <code>workflows</code> arrays.</p>
+<h2 id="conversion">Conversion<a class="headerlink" href="#conversion" title="Permanent link">&para;</a></h2>
+<p>Supply the same <code>path</code> and <code>text</code>, plus <code>action: "render"</code>, a diagram value, and a Workflow ID. Success returns a <code>puml</code> string containing PlantUML source. Java rendering is performed by the extension, not this bridge.</p>
+<p>Duplicate process IDs, unsupported diagram types, missing Workflow IDs, and IDs that do not identify a Workflow are rejected.</p>
+<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
+<p>Success exits with status 0. Caught exceptions produce <code>{"error": "ExceptionType: message"}</code> and status 1. The extension includes subprocess output in its error diagnostics. This is an internal interface, not a versioned public API.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../behavior/" class="btn btn-neutral float-left" title="Supported behavior"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../explanation/architecture/" class="btn btn-neutral float-right" title="Architecture and security">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/transpiler-mate/cwl-uml-viewer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../behavior/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../explanation/architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

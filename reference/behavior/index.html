@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Supported behavior - CWL UML</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Supported behavior";
+        var mkdocs_page_input_path = "reference/behavior.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> CWL UML
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-diagram/">Your first diagram</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/configure/">Configure previews</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/dependencies/">Manage vendor dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/troubleshoot/">Troubleshoot rendering</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/develop/">Develop and package</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/documentation/">Build the documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Supported behavior</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#dependency-versions">Dependency versions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#licenses">Licenses</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bridge/">Python bridge protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Explanation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../explanation/architecture/">Architecture and security</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">CWL UML</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Supported behavior</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="supported-behavior">Supported behavior<a class="headerlink" href="#supported-behavior" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td><code>cwlUml.visualize</code>, displayed as <strong>CWL: Visualize UML</strong> in the Command Palette.</td>
+</tr>
+<tr>
+<td>Context menus</td>
+<td>Explorer and editor menus for <code>.cwl</code>, <code>.yaml</code>, and <code>.yml</code> in trusted workspaces.</td>
+</tr>
+<tr>
+<td>File schemes</td>
+<td><code>file</code> and <code>vscode-remote</code>; saved filesystem documents are required.</td>
+</tr>
+<tr>
+<td>Diagrams</td>
+<td>Activity, component, class, sequence, state, subject to upstream template support.</td>
+</tr>
+<tr>
+<td>Roots</td>
+<td>Workflow only; standalone tools have no available diagrams.</td>
+</tr>
+<tr>
+<td>Workflow picker</td>
+<td>Required for every diagram, including single-workflow documents; cancellation stops processing.</td>
+</tr>
+<tr>
+<td>Source snapshot</td>
+<td>Current text of the selected document, including unsaved edits; no source writes.</td>
+</tr>
+<tr>
+<td>References</td>
+<td>Resolved relative to the source file URI; imported files are read from disk.</td>
+</tr>
+<tr>
+<td>Preview</td>
+<td>Read-only image beside the source; no automatic refresh or separate OS window.</td>
+</tr>
+<tr>
+<td>Panel reuse</td>
+<td>Same document URI, diagram type, and Workflow ID reuse the panel.</td>
+</tr>
+<tr>
+<td>Processes</td>
+<td>Fresh Python process for inspection, another for conversion, then Java for rendering.</td>
+</tr>
+<tr>
+<td>Cancellation</td>
+<td>Progress cancellation aborts processing; cancelling either picker stops the operation.</td>
+</tr>
+<tr>
+<td>Output limits</td>
+<td>32 MiB stdout per subprocess; stderr capture is bounded at 64 KiB.</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>Desktop VS Code 1.85+; workspace extension host; no virtual workspaces or browser-only mode.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependency-versions">Dependency versions<a class="headerlink" href="#dependency-versions" title="Permanent link">&para;</a></h2>
+<p>Direct Python pins are <code>cwl-loader==0.26.0</code> and <code>cwl2puml==0.49.0</code>. The bundled JAR is <code>plantuml-asl-1.2026.8.jar</code>. Python 3.10+ is the documented baseline, but bundled native modules constrain the actual interpreter and platform; the current bundle contains CPython 3.10 Linux x86-64 binaries.</p>
+<p>The bridge adds <code>@enduml</code> if the upstream class template omits it. Diagram semantics otherwise come from upstream. Support for every valid CWL feature is not guaranteed. Remote operation has not been manually tested.</p>
+<h2 id="licenses">Licenses<a class="headerlink" href="#licenses" title="Permanent link">&para;</a></h2>
+<p>Extension code uses Apache-2.0. Vendored Python distributions retain their license files and metadata. PlantUML uses the ASL distribution; separately installed runtimes and Graphviz retain their own licenses.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../settings/" class="btn btn-neutral float-left" title="Settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../bridge/" class="btn btn-neutral float-right" title="Python bridge protocol">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/transpiler-mate/cwl-uml-viewer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../settings/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../bridge/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

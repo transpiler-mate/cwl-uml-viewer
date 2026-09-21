@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Troubleshoot rendering - CWL UML</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Troubleshoot rendering";
+        var mkdocs_page_input_path = "how-to/troubleshoot.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> CWL UML
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-diagram/">Your first diagram</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configure/">Configure previews</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dependencies/">Manage vendor dependencies</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Troubleshoot rendering</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../develop/">Develop and package</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../documentation/">Build the documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/behavior/">Supported behavior</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/bridge/">Python bridge protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Explanation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../explanation/architecture/">Architecture and security</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">CWL UML</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">How-to guides</li>
+      <li class="breadcrumb-item active">Troubleshoot rendering</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="troubleshoot-rendering">Troubleshoot rendering<a class="headerlink" href="#troubleshoot-rendering" title="Permanent link">&para;</a></h1>
+<p>Choose <strong>Show details</strong> in an error notification to open the <strong>CWL UML</strong> output channel. It includes subprocess diagnostics; start with the first loading or renderer error.</p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command unavailable</td>
+<td>Use a trusted workspace and a saved <code>.cwl</code>, <code>.yaml</code>, or <code>.yml</code> file. The Command Palette command is <strong>CWL: Visualize UML</strong>.</td>
+</tr>
+<tr>
+<td>Open a saved CWL file first</td>
+<td>Save the document to the local or remote workspace filesystem; untitled and virtual documents are unsupported.</td>
+</tr>
+<tr>
+<td>Python or Java cannot start</td>
+<td>Set an absolute executable path in the corresponding setting and verify it exists on the extension host.</td>
+</tr>
+<tr>
+<td>Missing module or native-module import failure</td>
+<td>Check Python version, OS, and architecture against the vendor bundle; <a href="../dependencies/">rebuild dependencies</a> if needed. Installing packages elsewhere does not override the bundle.</td>
+</tr>
+<tr>
+<td>Missing JAR or invalid JAR path</td>
+<td>Clear <code>cwlUml.plantumlJar</code> to use the bundled JAR, or supply an existing absolute path. Check that the VSIX contains the vendor JAR.</td>
+</tr>
+<tr>
+<td>Document has no Workflow</td>
+<td>Select a document containing a Workflow. Standalone CommandLineTool and ExpressionTool roots are unsupported.</td>
+</tr>
+<tr>
+<td>CWL loading error</td>
+<td>Check CWL syntax, relative imports, saved referenced files, and access to remote resources. Ordinary YAML is not necessarily CWL.</td>
+</tr>
+<tr>
+<td>Unknown workflow</td>
+<td>Select the Workflow ID offered by the picker. The bridge accepts exact loaded IDs only.</td>
+</tr>
+<tr>
+<td>Timeout</td>
+<td>Increase <code>cwlUml.timeoutMs</code> within its supported bounds; investigate slow resource fetching or rendering.</td>
+</tr>
+<tr>
+<td>No valid image or missing dot</td>
+<td>Check Java and the ASL JAR; install Graphviz and make <code>dot</code> available on the extension host if the renderer requires it.</td>
+</tr>
+<tr>
+<td>Preview appears stale</td>
+<td>Run the command again. Save imported files first; only the selected document's unsaved text is included.</td>
+</tr>
+<tr>
+<td>Process output exceeds size limit</td>
+<td>Reduce the document or diagram size; stdout is limited to 32 MiB per subprocess.</td>
+</tr>
+</tbody>
+</table>
+<p>For a reproducible report, record the diagram type, selected Workflow ID, Python and Java versions, OS/architecture, relevant settings, and output-channel diagnostics. Include a minimal CWL example and its required references.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../dependencies/" class="btn btn-neutral float-left" title="Manage vendor dependencies"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../develop/" class="btn btn-neutral float-right" title="Develop and package">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/transpiler-mate/cwl-uml-viewer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../dependencies/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../develop/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
