@@ -30,7 +30,7 @@ concurrency:
 
 jobs:
   check:
-    name: Compile, lint, and test
+    name: JavaScript tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -46,5 +46,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run checks
-        run: npm run check
+      - name: Run tests
+        run: npm test
