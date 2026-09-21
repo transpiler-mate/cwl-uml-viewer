@@ -1,0 +1,43 @@
+site_name: CWL UML
+site_description: Read-only UML previews for CWL workflows in VS Code
+repo_url: https://github.com/transpiler-mate/cwl-uml-viewer
+edit_uri: ''
+theme:
+  name: readthedocs
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
+validation:
+  nav:
+    omitted_files: warn
+  links:
+    not_found: warn
+    unrecognized_links: warn
+    anchors: warn
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Your first diagram: tutorials/first-diagram.md
+  - How-to guides:
+      - Overview: how-to/index.md
+      - Configure previews: how-to/configure.md
+      - Manage vendor dependencies: how-to/dependencies.md
+      - Troubleshoot rendering: how-to/troubleshoot.md
+      - Develop and package: how-to/develop.md
+      - Build the documentation: how-to/documentation.md
+  - Reference:
+      - Overview: reference/index.md
+      - Settings: reference/settings.md
+      - Supported behavior: reference/behavior.md
+      - Python bridge protocol: reference/bridge.md
+  - Explanation:
+      - Architecture and security: explanation/architecture.md

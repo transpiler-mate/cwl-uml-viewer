@@ -1,0 +1,99 @@
+{
+  "name": "cwl-uml",
+  "displayName": "CWL UML",
+  "description": "Read-only UML previews for CWL using cwl-loader, cwl2puml and local ASL PlantUML.",
+  "version": "0.1.0",
+  "publisher": "transpiler-mate",
+  "license": "Apache-2.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization"
+  ],
+  "main": "./src/extension.js",
+  "extensionKind": [
+    "workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false,
+      "description": "Loads CWL references and runs local Python and Java."
+    },
+    "virtualWorkspaces": {
+      "supported": false
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "package": "vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "3.6.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "cwlUml.visualize",
+        "title": "Visualize UML",
+        "category": "CWL",
+        "enablement": "isWorkspaceTrusted"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "cwlUml.visualize",
+          "when": "isWorkspaceTrusted && (resourceExtname == .cwl || resourceExtname == .yaml || resourceExtname == .yml)",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "cwlUml.visualize",
+          "when": "isWorkspaceTrusted && (resourceExtname == .cwl || resourceExtname == .yaml || resourceExtname == .yml)",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "CWL UML",
+      "properties": {
+        "cwlUml.pythonPath": {
+          "type": "string",
+          "default": "python3",
+          "description": "Python executable with python/requirements.txt installed. Use an absolute path to a virtual environment interpreter.",
+          "scope": "machine-overridable"
+        },
+        "cwlUml.javaPath": {
+          "type": "string",
+          "default": "java",
+          "description": "Java executable (Java 17+ recommended).",
+          "scope": "machine-overridable"
+        },
+        "cwlUml.plantumlJar": {
+          "type": "string",
+          "default": "",
+          "description": "Absolute path to the Apache-licensed PlantUML JAR (plantuml-asl).",
+          "scope": "machine-overridable"
+        },
+        "cwlUml.format": {
+          "type": "string",
+          "enum": [
+            "svg",
+            "png"
+          ],
+          "default": "svg",
+          "description": "Read-only preview image format."
+        },
+        "cwlUml.timeoutMs": {
+          "type": "number",
+          "default": 60000,
+          "minimum": 1000,
+          "maximum": 300000,
+          "description": "Timeout for each Python or Java process."
+        }
+      }
+    }
+  }
+}

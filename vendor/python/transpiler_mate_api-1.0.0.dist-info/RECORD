@@ -1,0 +1,14 @@
+transpiler_mate/api/__about__.py,sha256=8YusF-3dJvR_O2nhUy165aTcJC-2y0VUzn-6MBBz2Dw,816
+transpiler_mate/api/__init__.py,sha256=MBDoPBf3R9iEBdyXbgi_3rmMfgTbuulUaJ2YOLiaa0E,1667
+transpiler_mate/api/__pycache__/__about__.cpython-310.pyc,,
+transpiler_mate/api/__pycache__/__init__.cpython-310.pyc,,
+transpiler_mate/api/__pycache__/plugin.cpython-310.pyc,,
+transpiler_mate/api/__pycache__/software_application_models.cpython-310.pyc,,
+transpiler_mate/api/plugin.py,sha256=cpU3Y86Xft6C7ImfCGfPnsbnr0dSxD__MhJNMcQ0YPU,6035
+transpiler_mate/api/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transpiler_mate/api/software_application_models.py,sha256=sngNyZUqQNiQuFyGx5anD4auaJdlJEVrkWCE7dWjDkY,19539
+transpiler_mate_api-1.0.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+transpiler_mate_api-1.0.0.dist-info/METADATA,sha256=Fa8XtaVdAcWX1y9_-YaiiUWi8IpInuFBk5u5pxeuLyw,1159
+transpiler_mate_api-1.0.0.dist-info/RECORD,,
+transpiler_mate_api-1.0.0.dist-info/WHEEL,sha256=zOwg4jB6zX2kU910N-cMawjivD6tO8NEWvE12je1bVk,87
+transpiler_mate_api-1.0.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357

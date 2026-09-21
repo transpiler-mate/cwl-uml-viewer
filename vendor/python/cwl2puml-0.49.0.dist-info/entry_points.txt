@@ -1,0 +1,2 @@
+[transpiler_mate.plugins]
+cwl2puml = cwl2puml.plugin:cwl2puml

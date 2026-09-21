@@ -1,0 +1,23 @@
+Metadata-Version: 2.5
+Name: transpiler-mate-api
+Version: 1.0.0
+Summary: Stable, execution-environment-neutral contracts for transpiler-mate plugins
+Project-URL: Documentation, https://transpiler-mate.github.io/transpiler-mate-api/
+Project-URL: Issues, https://github.com/transpiler-mate/transpiler-mate-api/issues
+Project-URL: Source, https://github.com/transpiler-mate/transpiler-mate-api
+Author-email: Simone Tripodi <simone.tripodi@terradue.com>, Fabrice Brito <fabrice.brito@terradue.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: cwl-utils<1,>=0.43
+Requires-Dist: email-validator>=2.3.0
+Requires-Dist: pydantic<3,>=2.13.4

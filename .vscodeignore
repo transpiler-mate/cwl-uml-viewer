@@ -1,0 +1,13 @@
+.vscode/**
+.venv/**
+node_modules/**
+tests/**
+scripts/**
+**/__pycache__/**
+.pytest_cache/**
+*.vsix
+.venv-docs/**
+site/**
+docs/**
+mkdocs.yaml
+requirements-docs.txt

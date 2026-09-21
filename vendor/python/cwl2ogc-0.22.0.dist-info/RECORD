@@ -1,0 +1,13 @@
+cwl2ogc-0.22.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+cwl2ogc-0.22.0.dist-info/METADATA,sha256=Uc1J4_vh9iBDxAUqHSItjqaIWc4jm4x74gxdUO1kJLs,4554
+cwl2ogc-0.22.0.dist-info/RECORD,,
+cwl2ogc-0.22.0.dist-info/WHEEL,sha256=THafob7ofN-NsuMN7Mg4qZyHaQI7KkD-QlcQatYhXPo,87
+cwl2ogc-0.22.0.dist-info/entry_points.txt,sha256=vLsnTy9PCmc2vY9BwUBAvC9419VMhYwM6ZhhN7fDNXM,59
+cwl2ogc-0.22.0.dist-info/licenses/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+cwl2ogc-0.22.0.dist-info/licenses/NOTICE,sha256=Ci3wdRonyhzf3wo1sxP6Qab_bnudZrBCaRTyAwQTN2I,134
+cwl2ogc/__about__.py,sha256=zRp-Tks9G7C2U1VikYzUYZFn4SnlWXXWL0U0rLhuWtk,596
+cwl2ogc/__init__.py,sha256=neXxVjxlesAlRAK0Agrg2G71nWhtB9o-9_F1X6vfmlw,18397
+cwl2ogc/__pycache__/__about__.cpython-310.pyc,,
+cwl2ogc/__pycache__/__init__.cpython-310.pyc,,
+cwl2ogc/__pycache__/plugin.cpython-310.pyc,,
+cwl2ogc/plugin.py,sha256=4SatbQPsI0IkaWKpqBR2NIt3uQWXKWNTQ7UiLQc1YiY,3408
