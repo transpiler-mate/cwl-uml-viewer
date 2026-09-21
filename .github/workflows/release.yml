@@ -30,11 +30,6 @@ jobs:
     environment: vscode-marketplace
     timeout-minutes: 15
 
-    env:
-      AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
-      AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
-      MARKETPLACE_PUBLISHER: ${{ vars.VSCE_PUBLISHER }}
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
@@ -58,22 +53,7 @@ jobs:
             exit 1
           fi
 
-          if [[ -z "$MARKETPLACE_PUBLISHER" ]]; then
-            echo "The VSCE_PUBLISHER variable is not configured in the vscode-marketplace environment" >&2
-            exit 1
-          fi
-
-          if [[ "$MARKETPLACE_PUBLISHER" == "local" ]]; then
-            echo "VSCE_PUBLISHER must be the real Visual Studio Marketplace publisher ID" >&2
-            exit 1
-          fi
-
-          if [[ -z "$AZURE_CLIENT_ID" || -z "$AZURE_TENANT_ID" ]]; then
-            echo "AZURE_CLIENT_ID and AZURE_TENANT_ID must be configured in the vscode-marketplace environment" >&2
-            exit 1
-          fi
-
-          npm pkg set "publisher=$MARKETPLACE_PUBLISHER"
+          npm pkg set "publisher=terradue"
 
       - name: Install dependencies
         run: npm install
