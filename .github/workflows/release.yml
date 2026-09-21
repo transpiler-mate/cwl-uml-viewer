@@ -21,13 +21,11 @@ on:
 
 permissions:
   contents: write
-  id-token: write
 
 jobs:
   release:
-    name: Package and publish extension
+    name: Package VSIX and attach to GitHub release
     runs-on: ubuntu-latest
-    environment: vscode-marketplace
     timeout-minutes: 15
 
     steps:
@@ -53,10 +51,8 @@ jobs:
             exit 1
           fi
 
-          npm pkg set "publisher=terradue"
-
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Package extension
         run: npm run package -- --out "${{ github.event.repository.name }}-${GITHUB_REF_NAME}.vsix"

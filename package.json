@@ -3,7 +3,11 @@
   "displayName": "CWL UML",
   "description": "Read-only UML previews for CWL using cwl-loader, cwl2puml and local ASL PlantUML.",
   "version": "0.1.0",
-  "publisher": "transpiler-mate",
+  "publisher": "terradue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/transpiler-mate/cwl-uml-viewer.git"
+  },
   "license": "Apache-2.0",
   "engines": {
     "vscode": "^1.85.0"
@@ -26,7 +30,7 @@
   },
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "package": "vsce package --allow-missing-repository"
+    "package": "vsce package --githubBranch main"
   },
   "devDependencies": {
     "@vscode/vsce": "4.0.0"

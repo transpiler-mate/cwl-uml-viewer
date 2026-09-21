@@ -36,4 +36,15 @@ With Task installed, `task package` builds the same filename. `task install` pac
 
 The package version comes from `package.json`. Vendor files are included by the current `.vscodeignore` rules, so confirm the Python bundle matches the intended target before distributing the VSIX. Python and Java executables are not included.
 
-Confirm publisher and repository metadata before publishing. This guide builds and installs locally; it does not publish an extension release.
+## Publish manually to the Marketplace
+
+The manifest uses Marketplace publisher ID `terradue`. The GitHub repository belongs to `transpiler-mate`; these identifiers serve different purposes. The repository URL and the package command's `--githubBranch main` option let `vsce` convert relative README links into links to the source on GitHub.
+
+1. Set the intended version in `package.json` and update `package-lock.json` to match. Commit the release changes before creating a matching `vX.Y.Z` tag.
+2. Push the tag to trigger the release workflow. It builds the VSIX and attaches it to a GitHub release. It does not publish to the VS Code Marketplace or require Marketplace credentials.
+3. Download the VSIX from the GitHub release and test it in VS Code.
+4. Sign in to the [Marketplace publisher management page](https://marketplace.visualstudio.com/manage), select `terradue`, and upload the VSIX to create or update the extension. Your account must have access to that publisher.
+
+You can also build the VSIX locally using the package command above and upload it manually. See the [official publishing instructions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publish-an-extension).
+
+A workflow rerun uses the files from its original tag. To include a packaging fix, create a new release commit and matching version tag; rerunning a failed job at an older tag will not pick up changes from `main`.
